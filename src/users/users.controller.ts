@@ -8,10 +8,10 @@ export class UsersController {
 
   @Post()
   create(@Body() createUserDto: CreateUserDto) {
-    return createUserDto;
+    return this.usersService.create(createUserDto);
   }
 
-  @Get()
+  /* @Get()
   findAll() {
     return this.usersService.findAll();
   }
@@ -19,7 +19,7 @@ export class UsersController {
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.usersService.findOne(+id);
-  }
+  } */
 
   @Delete(':id')
   remove(@Param('id') id: string) {

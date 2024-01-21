@@ -9,5 +9,6 @@ import { SecurityModule } from 'src/security/security.module';
   imports: [TypeOrmModule.forFeature([User]), SecurityModule],
   controllers: [UsersController],
   providers: [UsersService],
+  exports: [UsersService],
 })
 export class UsersModule {}
